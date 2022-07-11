@@ -46,3 +46,26 @@ footer{
     background: #333;
     text-align: center;
 }
+
+input#name, input#shout{
+    padding: 3px;
+    margin: 15px;
+}
+
+input#name{
+    width: 130px;
+    margin-right:20px;
+}
+
+input#shout{
+    width: 270px;
+}
+
+button#submit{
+    padding: 5px 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background: rgb(62, 62, 150);
+    color: #fff;
+    cursor: pointer;
+}
