@@ -1,5 +1,7 @@
 <?php
-    // include "db.php";
+    include "db.php";
+    $query = "SELECT * FROM shout_tb ORDER BY id DESC";
+    $shouts = mysqli_query($conn, $query);
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +36,9 @@
 
     <div id="shouts">
         <ul>
-            <li></li>
+            <?php while ($row = mysqli_fetch_assoc($shouts)) : ?>
+                <li><?php echo $row['name']. ':  ' . $row['shout'];?></li>
+            <?php endwhile;?>
         </ul>
     </div>
 
