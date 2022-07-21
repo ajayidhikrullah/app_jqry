@@ -52,18 +52,23 @@ footer{
     text-align: center;
 }
 
-input#name, input#shout{
+input#name, input#shout, select#department, select#courses{
     padding: 3px;
     margin: 15px;
 }
 
-input#name{
+input#name, select#department{
     width: 130px;
     margin-right:20px;
 }
 
-input#shout{
+input#shout, select#courses{
     width: 270px;
+}
+
+/* change color of user name when fetching result */
+li#user_message p.user_name{
+    color: rgb(206, 255, 196);
 }
 
 button#submit{

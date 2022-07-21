@@ -1,0 +1,21 @@
+hello checking and texting
+
+Add foriegn key to an existing TB
+*ALTER TABLE courses ADD CONSTRAINT fk_department_tb_id FOREIGN KEY (department_tb_id) REFERENCES department_tb(id);
+
+- Insert multiple data into existing table
+INSERT INTO `department_tb` (`name`) VALUES ('General Studies'), ('Tech'), ('Health');
+
+- INSERT into multiple TB with multiple data including forign key
+INSERT INTO `courses` (`name`, `department_tb_id`) VALUES ('GSC-101', 1), ('GSC-201', 2), ('Medicine', 3), ('Nursing', 3), ('Computer science', 2), ('Data Science', 2);
+
+- Change a data in colunmn name
+- UPDATE `courses` SET `department_tb_id` = 1 WHERE `id` = 2;
+UPDATE `courses` SET `id`='[value-1]',`name`='[value-2]',`department_tb_id`='[value-3]' WHERE 1
+
+//fETCH DATA FROM ANOTHER RELATIONAL TB USING FULL JOIN
+SELECT * FROM `courses` FULL JOIN `department_tb` ON `department_tb_id` = department_tb.id;
+SELECT courses.name FROM `courses` RIGHT JOIN `department_tb` ON `department_tb_id` = department_tb.id;
+
+##rename or change column name in sql
+ALTER TABLE users CHANGE COLUMN department department_id INT(11);

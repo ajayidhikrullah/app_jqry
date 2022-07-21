@@ -54,6 +54,68 @@ $(document).ready(function(){ //ready ur documents
     });
 });
 
+// departments
+// $(document).ready(function(){
+//     $('#departments').value();
+//     $('#courses').value();
+
+//     load_data('dc_data');
+
+//     function load_data(type, department_tb_id) {
+//         $.ajax({
+//             url: "../enistic/load_data.php",
+//             method: "POST",
+//             data:{type:type, department_tb_id:department_tb_id},
+//             dataType:"json",
+//             success:function(data){
+//                 let html = '';
+//                 for(let count = 0; count < data.length; count++){
+//                     html+= '<option value="' +data[count].id+'">'+data[count].name+'</option>';
+//                 }
+//                     if(type == 'dc_data'){
+//                         $('#departments').value();
+//                         $('#departments').value();
+//                     }
+//                     else{
+//                         $('#courses').value();
+//                         $('#courses').value();
+//                     }
+//             }
+//         })
+//     }
+//     $(document).on('change', '#departments', function(){
+//         let department_tb_id = $('#departments').val();
+//         load_data('courses', department_tb_id);
+//     });
+// });
+
+
+// return department
+$(document).ready(function(){
+    $.ajax({
+        // type: "GET",
+        url:"load_data.php",
+        dataType:"html",
+        cache: false,
+        success: function(dept){
+            $('#departments').html(dept);
+        }
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -88,3 +150,11 @@ $("a[href='#top']").click(function() {
       let textlen = maxlength - $(this).val().length;
       $('#rchars').text(textlen);
   });
+
+
+
+  /**
+   * XMLHTTP REQUEST
+   */
+  
+  
